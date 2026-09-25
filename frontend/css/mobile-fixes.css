@@ -24,6 +24,10 @@
   display: none;
 }
 
+.hero-whatsapp-icon {
+  display: none;
+}
+
 @media (min-width: 961px) {
   /* Cada destino del menú ocupa el espacio visible bajo el encabezado. */
   .navigation {
@@ -86,14 +90,15 @@
 
   .hero {
     height: auto;
-    min-height: max(100svh, 860px);
+    min-height: max(100svh, 960px);
   }
 
   .hero-content {
-    width: min(1320px, calc(100% - 64px));
-    margin-left: max(32px, calc(50vw - 760px));
-    margin-right: 0;
+    width: calc(100% - 64px);
+    margin-left: 32px;
+    margin-right: 32px;
     padding-top: var(--header-offset);
+    padding-bottom: 110px;
   }
 
   .hero .eyebrow {
@@ -117,13 +122,26 @@
   }
 
   .hero-actions .button {
-    min-height: 76px;
-    padding: 20px 32px;
+    min-height: 94px;
+    gap: 16px;
+    padding: 24px 36px;
     border-color: #25d366;
     background: #25d366;
     color: #062b1c;
-    font-size: 1.08rem;
+    font-size: 1.25rem;
     box-shadow: 0 12px 28px rgba(37, 211, 102, .28);
+  }
+
+  .hero-actions .button span {
+    display: none;
+  }
+
+  .hero-whatsapp-icon {
+    display: block;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    stroke-width: 1.9;
   }
 
   .hero-actions .button:hover {
@@ -157,6 +175,36 @@
 
   .trust-list span {
     font-size: .9rem;
+  }
+
+  .proof-band {
+    position: relative;
+    z-index: 2;
+    margin-top: -110px;
+    border-top: 1px solid rgba(255, 255, 255, .22);
+    border-bottom: 0;
+    background: rgba(7, 19, 33, .94);
+    color: #fff;
+    backdrop-filter: blur(10px);
+  }
+
+  .proof-grid {
+    min-height: 110px;
+  }
+
+  .proof-grid p,
+  .proof-grid strong {
+    color: #fff;
+    font-size: .94rem;
+  }
+
+  .proof-grid div {
+    border-left-color: rgba(255, 255, 255, .22);
+  }
+
+  .proof-grid span {
+    color: #c7d7e6;
+    font-size: .8rem;
   }
 
   .section,
