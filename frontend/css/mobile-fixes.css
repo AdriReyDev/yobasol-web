@@ -20,6 +20,10 @@
   display: none;
 }
 
+.hero-link--desktop {
+  display: none;
+}
+
 @media (min-width: 961px) {
   /* Cada destino del menú ocupa el espacio visible bajo el encabezado. */
   .navigation {
@@ -78,6 +82,81 @@
     height: 22px;
     flex: 0 0 auto;
     stroke-width: 1.9;
+  }
+
+  .hero {
+    height: auto;
+    min-height: max(100svh, 860px);
+  }
+
+  .hero-content {
+    width: min(1320px, calc(100% - 64px));
+    margin-left: max(32px, calc(50vw - 760px));
+    margin-right: 0;
+    padding-top: var(--header-offset);
+  }
+
+  .hero .eyebrow {
+    font-size: .9rem;
+  }
+
+  .hero h1 {
+    max-width: 980px;
+    font-size: clamp(4rem, 6.2vw, 6.5rem);
+  }
+
+  .hero-copy {
+    max-width: 660px;
+    font-size: 1.2rem;
+  }
+
+  .hero-actions {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+
+  .hero-actions .button {
+    min-height: 76px;
+    padding: 20px 32px;
+    border-color: #25d366;
+    background: #25d366;
+    color: #062b1c;
+    font-size: 1.08rem;
+    box-shadow: 0 12px 28px rgba(37, 211, 102, .28);
+  }
+
+  .hero-actions .button:hover {
+    border-color: #5ced92;
+    background: #5ced92;
+  }
+
+  .hero-link--desktop {
+    display: inline-flex;
+    align-items: center;
+    min-height: 52px;
+    font-size: 1.08rem;
+  }
+
+  .hero-link--mobile {
+    display: none;
+  }
+
+  .trust-list {
+    max-width: 960px;
+    margin-top: 50px;
+  }
+
+  .trust-list li {
+    padding: 20px 24px;
+  }
+
+  .trust-list strong {
+    font-size: 1.12rem;
+  }
+
+  .trust-list span {
+    font-size: .9rem;
   }
 
   .section,
