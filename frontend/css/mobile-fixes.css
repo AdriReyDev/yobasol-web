@@ -1,0 +1,148 @@
+/* El formulario permanece en el HTML para retomarlo más adelante. */
+.contact-form[hidden] {
+  display: none !important;
+}
+
+.contact-layout {
+  display: block;
+  max-width: 720px;
+}
+
+.contact-copy > p:not(.eyebrow) {
+  max-width: 620px;
+}
+
+.contact-whatsapp {
+  margin-top: 32px;
+}
+
+@media (min-width: 961px) {
+  /* Cada destino del menú ocupa el espacio visible bajo el encabezado. */
+  .section,
+  .contact {
+    display: flex;
+    align-items: center;
+    min-height: calc(100svh - var(--header-offset));
+    padding: 32px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .service-card {
+    min-height: 300px;
+  }
+
+  .service-icon {
+    margin: 28px 0 18px;
+  }
+}
+
+@media (max-width: 960px) {
+  .header-actions .button--small {
+    display: inline-flex;
+    min-height: 44px;
+    gap: 6px;
+  }
+
+  .contact-section-label {
+    display: block;
+  }
+}
+
+@media (max-width: 580px) {
+  .header-actions .button--small {
+    padding: 8px 10px;
+    font-size: .66rem;
+  }
+
+  .header-actions .button--small span {
+    display: none;
+  }
+
+  .hero {
+    padding-top: var(--header-offset);
+  }
+
+  .services {
+    padding: 22px 0 32px;
+  }
+
+  .services .section-heading {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .services .eyebrow {
+    margin-bottom: 7px;
+    font-size: .68rem;
+  }
+
+  .services h2 {
+    margin: 0;
+    font-size: clamp(1.55rem, 6.5vw, 1.9rem);
+    line-height: 1.12;
+  }
+
+  .services .section-heading > p {
+    display: none;
+  }
+
+  .service-grid {
+    gap: 8px;
+  }
+
+  .service-card {
+    display: grid;
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: 2px 10px;
+    min-height: 0;
+    padding: 10px 12px;
+  }
+
+  .service-card--accent {
+    border-top: 1px solid var(--line);
+    border-left: 4px solid var(--orange);
+  }
+
+  .service-number {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+  }
+
+  .service-icon {
+    display: none;
+  }
+
+  .service-card h3,
+  .service-card p,
+  .service-card a {
+    grid-column: 2;
+  }
+
+  .service-card h3 {
+    grid-row: 1;
+    margin: 0;
+    font-size: .94rem;
+    line-height: 1.2;
+  }
+
+  .service-card p {
+    grid-row: 2;
+    margin: 0;
+    font-size: .75rem;
+    line-height: 1.35;
+  }
+
+  .service-card a {
+    grid-row: 3;
+    display: inline-flex;
+    align-items: center;
+    width: max-content;
+    min-height: 44px;
+    margin: 0;
+    font-size: .75rem;
+  }
+}
