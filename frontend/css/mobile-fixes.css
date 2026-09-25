@@ -16,8 +16,37 @@
   margin-top: 32px;
 }
 
+.header-whatsapp-icon {
+  display: none;
+}
+
 @media (min-width: 961px) {
   /* Cada destino del menú ocupa el espacio visible bajo el encabezado. */
+  .header-actions .button--small {
+    min-height: 44px;
+    gap: 9px;
+    border-color: #25d366;
+    background: #25d366;
+    color: #062b1c;
+  }
+
+  .header-actions .button--small:hover {
+    border-color: #5ced92;
+    background: #5ced92;
+  }
+
+  .header-actions .button--small span {
+    display: none;
+  }
+
+  .header-whatsapp-icon {
+    display: block;
+    width: 19px;
+    height: 19px;
+    flex: 0 0 auto;
+    stroke-width: 1.9;
+  }
+
   .section,
   .contact {
     display: flex;
