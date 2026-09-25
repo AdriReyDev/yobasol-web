@@ -94,7 +94,7 @@
     margin-left: 32px;
     margin-right: 32px;
     padding-top: var(--header-offset);
-    padding-bottom: 110px;
+    padding-bottom: 160px;
   }
 
   .hero .eyebrow {
@@ -175,7 +175,7 @@
   .proof-band {
     position: relative;
     z-index: 2;
-    margin-top: -110px;
+    margin-top: -160px;
     border-top: 1px solid rgba(255, 255, 255, .22);
     border-bottom: 0;
     background: rgba(7, 19, 33, .94);
@@ -184,22 +184,25 @@
   }
 
   .proof-grid {
-    min-height: 110px;
+    min-height: 160px;
+    padding: 20px 0;
   }
 
   .proof-grid p,
   .proof-grid strong {
     color: #fff;
-    font-size: .94rem;
+    font-size: 1.08rem;
   }
 
   .proof-grid div {
+    min-height: 74px;
+    padding-left: 28px;
     border-left-color: rgba(255, 255, 255, .22);
   }
 
   .proof-grid span {
     color: #c7d7e6;
-    font-size: .8rem;
+    font-size: .9rem;
   }
 
   .section,
