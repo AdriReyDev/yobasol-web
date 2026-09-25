@@ -2,6 +2,9 @@ const form = document.querySelector('.contact-form');
 const status = document.querySelector('.form-status');
 const header = document.querySelector('.site-header');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const desktopNavigation = window.matchMedia('(min-width: 961px)');
+const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
+let activeNavFrame = 0;
 
 function updateHeaderOffset() {
   document.documentElement.style.setProperty('--header-offset', `${header.offsetHeight}px`);
@@ -14,6 +17,30 @@ function scrollToAnchor(target, smooth = true) {
 
 updateHeaderOffset();
 window.addEventListener('resize', updateHeaderOffset);
+
+function updateActiveNavigation() {
+  activeNavFrame = 0;
+  const marker = header.offsetHeight + Math.min(window.innerHeight * .35, 300);
+  const activeLink = desktopNavigation.matches ? navLinks.find((link) => {
+    const section = document.querySelector(link.getAttribute('href'));
+    if (!section) return false;
+    const bounds = section.getBoundingClientRect();
+    return bounds.top <= marker && bounds.bottom > marker;
+  }) : null;
+
+  navLinks.forEach((link) => {
+    if (link === activeLink) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+}
+
+function scheduleActiveNavigation() {
+  if (!activeNavFrame) activeNavFrame = requestAnimationFrame(updateActiveNavigation);
+}
+
+window.addEventListener('scroll', scheduleActiveNavigation, { passive: true });
+window.addEventListener('resize', scheduleActiveNavigation);
+scheduleActiveNavigation();
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener('click', (event) => {
   const target = document.querySelector(link.getAttribute('href'));
