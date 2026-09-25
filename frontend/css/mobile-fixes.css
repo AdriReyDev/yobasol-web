@@ -586,7 +586,9 @@
   }
 
   .benefit-grid p {
+    color: var(--orange);
     font-size: clamp(1rem, .9vw, 1.15rem);
+    font-weight: 700;
     line-height: 1.55;
   }
 
