@@ -26,6 +26,12 @@
 
 @media (min-width: 961px) {
   /* Cada destino del menú ocupa el espacio visible bajo el encabezado. */
+  .header-actions .button--small,
+  .hero-actions .button,
+  .contact-whatsapp {
+    border-radius: 10px;
+  }
+
   .navigation {
     min-height: 104px;
     gap: 24px;
