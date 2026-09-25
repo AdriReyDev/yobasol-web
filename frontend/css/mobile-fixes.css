@@ -157,6 +157,10 @@
     font-size: clamp(4rem, 6.2vw, 6.5rem);
   }
 
+  .hero h1 em {
+    color: var(--focus);
+  }
+
   .hero-copy {
     max-width: 660px;
     margin-bottom: 0;
@@ -313,6 +317,10 @@
   }
 
   .guarantee h2 em {
+    color: var(--orange);
+  }
+
+  .services-title-accent {
     color: var(--orange);
   }
 
