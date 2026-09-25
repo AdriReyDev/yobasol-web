@@ -24,6 +24,16 @@
   display: none;
 }
 
+.grid-bg {
+  background-color: #f7f9fc;
+  background-repeat: repeat;
+  background-image:
+    url('../assets/images/circuit-grid.svg'),
+    linear-gradient(rgba(59, 130, 246, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, .07) 1px, transparent 1px);
+  background-size: 200px 200px, 20px 20px, 20px 20px;
+}
+
 @media (min-width: 961px) {
   /* Cada destino del menú ocupa el espacio visible bajo el encabezado. */
   .header-actions .button--small,
@@ -229,6 +239,263 @@
 
   .service-icon {
     margin: 28px 0 18px;
+  }
+}
+
+/* Más anchura, lectura y ritmo visual en las secciones de escritorio. */
+@media (min-width: 961px) {
+  .navigation,
+  .proof-grid,
+  .section > .container,
+  .contact > .container,
+  .footer-content {
+    width: min(1680px, calc(100% - 48px));
+  }
+
+  .section,
+  .contact {
+    padding: clamp(48px, 4vw, 80px) 0;
+  }
+
+  .proof-grid p,
+  .proof-grid strong {
+    font-size: clamp(1.05rem, 1vw, 1.2rem);
+  }
+
+  .proof-grid span {
+    font-size: clamp(.9rem, .85vw, 1.05rem);
+  }
+
+  .section h2,
+  .contact h2 {
+    font-size: clamp(3rem, 4.2vw, 5rem);
+    line-height: 1.06;
+  }
+
+  .section .eyebrow,
+  .contact .eyebrow {
+    font-size: .95rem;
+  }
+
+  .section-heading {
+    grid-template-columns: minmax(0, 1.3fr) minmax(270px, .7fr);
+    gap: clamp(36px, 5vw, 96px);
+    margin-bottom: 42px;
+  }
+
+  .section-heading > p {
+    font-size: clamp(1.1rem, 1vw, 1.25rem);
+    line-height: 1.6;
+  }
+
+  .service-grid {
+    grid-template-columns: 1.06fr 1fr .98fr;
+    align-items: start;
+    gap: 22px;
+  }
+
+  .service-card {
+    min-height: 360px;
+    padding: 32px;
+    border-radius: 14px;
+  }
+
+  .service-number,
+  .benefit-grid span {
+    font-size: .9rem;
+  }
+
+  .service-icon {
+    width: 72px;
+    height: 72px;
+    margin: 32px 0 22px;
+  }
+
+  .service-card h3 {
+    font-size: clamp(1.35rem, 1.25vw, 1.7rem);
+    line-height: 1.25;
+  }
+
+  .service-card p {
+    font-size: clamp(1rem, .9vw, 1.15rem);
+    line-height: 1.55;
+  }
+
+  .service-card a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: .98rem;
+  }
+
+  .process-layout {
+    grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+    align-items: center;
+    gap: clamp(48px, 5vw, 110px);
+  }
+
+  .process-intro p:not(.eyebrow) {
+    max-width: 580px;
+    font-size: clamp(1.1rem, 1vw, 1.25rem);
+    line-height: 1.6;
+  }
+
+  .process-list li {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 24px;
+    padding: 26px 0;
+  }
+
+  .process-list li > span {
+    font-size: .95rem;
+  }
+
+  .process-list h3 {
+    font-size: 1.3rem;
+  }
+
+  .process-list p {
+    font-size: clamp(1rem, .9vw, 1.15rem);
+    line-height: 1.55;
+  }
+
+  .guarantee-layout {
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(48px, 5vw, 110px);
+  }
+
+  .section-copy {
+    max-width: 640px;
+    font-size: clamp(1.1rem, 1vw, 1.25rem);
+    line-height: 1.6;
+  }
+
+  .benefit-grid {
+    grid-template-columns: 1.08fr .92fr;
+    gap: 18px;
+    border: 0;
+    background: transparent;
+  }
+
+  .benefit-grid article {
+    min-height: 230px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: 0 12px 32px rgba(9, 26, 45, .04);
+  }
+
+  .benefit-grid article:nth-child(even) {
+    border-right: 1px solid var(--line);
+  }
+
+  .benefit-grid article:nth-last-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .benefit-grid h3 {
+    margin: 30px 0 10px;
+    font-size: clamp(1.2rem, 1vw, 1.45rem);
+  }
+
+  .benefit-grid p {
+    font-size: clamp(1rem, .9vw, 1.15rem);
+    line-height: 1.55;
+  }
+
+  .contact-layout {
+    max-width: none;
+  }
+
+  .contact-copy {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, .58fr);
+    align-items: center;
+    column-gap: clamp(40px, 6vw, 120px);
+  }
+
+  .contact-copy > .eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .contact-copy h2 {
+    grid-column: 1;
+    grid-row: 2;
+    max-width: 860px;
+  }
+
+  .contact-copy > p:not(.eyebrow) {
+    grid-column: 1;
+    grid-row: 3;
+    max-width: 650px;
+    font-size: clamp(1.1rem, 1vw, 1.3rem);
+    line-height: 1.6;
+  }
+
+  .contact-whatsapp {
+    grid-column: 2;
+    grid-row: 1 / 4;
+    width: 100%;
+    max-width: none;
+    min-height: 118px;
+    gap: 10px;
+    margin-top: 0;
+    padding: 25px 24px;
+    font-size: clamp(1.05rem, 1vw, 1.2rem);
+  }
+
+  .contact-whatsapp svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-whatsapp small {
+    font-size: .9rem;
+  }
+
+  .site-footer {
+    padding: 30px 0;
+  }
+
+  .footer-content {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .brand {
+    font-size: 1.65rem;
+  }
+
+  .main-nav a {
+    font-size: 1.02rem;
+  }
+
+  .header-actions .button--small {
+    font-size: .92rem;
+  }
+
+  .proof-grid p {
+    max-width: 540px;
+  }
+
+  .service-card:nth-child(2) {
+    margin-top: 28px;
+  }
+
+  .service-card:nth-child(3) {
+    margin-top: 12px;
+  }
+
+  .process-list li:nth-child(even) {
+    margin-left: 28px;
+  }
+
+  .benefit-grid article:nth-child(even) {
+    margin-top: 28px;
   }
 }
 
