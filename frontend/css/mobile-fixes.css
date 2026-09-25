@@ -287,6 +287,10 @@
     line-height: 1.06;
   }
 
+  .guarantee h2 em {
+    color: var(--orange);
+  }
+
   .section .eyebrow,
   .contact .eyebrow {
     font-size: .95rem;
