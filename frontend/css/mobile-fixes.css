@@ -35,6 +35,21 @@
     background-size: 200px 200px, 20px 20px, 20px 20px;
   }
 
+  .grid-bg--technical {
+    background-color: var(--navy);
+    background-image:
+      linear-gradient(rgba(147, 197, 253, .10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(147, 197, 253, .10) 1px, transparent 1px),
+      linear-gradient(rgba(147, 197, 253, .22) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(147, 197, 253, .22) 1px, transparent 1px),
+      radial-gradient(circle, rgba(191, 219, 254, .45) 1.2px, transparent 1.6px);
+    background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px, 100px 100px;
+  }
+
+  .contact.grid-bg--technical {
+    background-color: #102b47;
+  }
+
   /* Cada destino del menú ocupa el espacio visible bajo el encabezado. */
   .header-actions .button--small,
   .hero-actions .button,
