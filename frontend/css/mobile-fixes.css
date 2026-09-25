@@ -20,10 +20,6 @@
   display: none;
 }
 
-.hero-link--desktop {
-  display: none;
-}
-
 .hero-whatsapp-icon {
   display: none;
 }
@@ -112,13 +108,16 @@
 
   .hero-copy {
     max-width: 660px;
+    margin-bottom: 0;
     font-size: 1.2rem;
   }
 
   .hero-actions {
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     flex-wrap: nowrap;
-    gap: 24px;
+    gap: 20px;
+    margin-top: 24px;
   }
 
   .hero-actions .button {
@@ -149,15 +148,11 @@
     background: #5ced92;
   }
 
-  .hero-link--desktop {
+  .hero-link--secondary {
     display: inline-flex;
     align-items: center;
     min-height: 52px;
     font-size: 1.08rem;
-  }
-
-  .hero-link--mobile {
-    display: none;
   }
 
   .trust-list {
