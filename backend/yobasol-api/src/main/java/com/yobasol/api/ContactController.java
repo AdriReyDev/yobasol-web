@@ -9,7 +9,7 @@ import jakarta.validation.Valid;
 public class ContactController {
 
     @PostMapping("/api/contact")
-    public String contact(@Valid @RequestBody ContactRequest request){
-        return "Solicitud recibida de " + request.name();
+    public ContactResponse contact(@Valid @RequestBody ContactRequest request){
+        return new ContactResponse("Solicitud recibida de " + request.name());
     }
 }

@@ -1,4 +1,4 @@
 package com.yobasol.api;
 
-public class ContactResponse {
+public record ContactResponse(String message) {
 }
