@@ -1,13 +1,26 @@
 const form = document.querySelector('.contact-form');
 const status = document.querySelector('.form-status');
 const header = document.querySelector('.site-header');
+const footer = document.querySelector('.site-footer');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const desktopNavigation = window.matchMedia('(min-width: 961px)');
+const mobileHero = window.matchMedia('(max-width: 580px)');
+const hero = document.querySelector('.hero');
+const coverage = document.querySelector('.proof-band');
 const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
 let activeNavFrame = 0;
 
+function updateHeroCoverage() {
+  if (mobileHero.matches) hero.append(coverage);
+  else hero.after(coverage);
+}
+
+updateHeroCoverage();
+mobileHero.addEventListener('change', updateHeroCoverage);
+
 function updateHeaderOffset() {
   document.documentElement.style.setProperty('--header-offset', `${header.offsetHeight}px`);
+  document.documentElement.style.setProperty('--footer-height', `${footer.offsetHeight}px`);
 }
 
 function scrollToAnchor(target, smooth = true) {
@@ -17,6 +30,9 @@ function scrollToAnchor(target, smooth = true) {
 
 updateHeaderOffset();
 window.addEventListener('resize', updateHeaderOffset);
+const pageChromeObserver = new ResizeObserver(updateHeaderOffset);
+pageChromeObserver.observe(header);
+pageChromeObserver.observe(footer);
 
 function updateActiveNavigation() {
   activeNavFrame = 0;
