@@ -7,3 +7,5 @@ HTML · CSS
 
 ## Screenshot
 ![Yobasol landing page](screenshot.png)
+
+Developed with the help of Codex (OpenAI)
